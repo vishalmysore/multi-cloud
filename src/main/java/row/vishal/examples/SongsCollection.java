@@ -1,14 +1,20 @@
 package row.vishal.examples;
+import java.util.function.Consumer;
+import java.util.function.Function;
+import java.util.function.Supplier;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
-import java.util.function.Consumer;
-import java.util.function.Function;
-import java.util.function.Supplier;
+import lombok.extern.slf4j.Slf4j;
+
+
+@Slf4j
 @SpringBootApplication
 public class SongsCollection {
 	public static void main(String[] args) {
+		log.info("Starting cloud native Song Museum");
 		SpringApplication.run(SongsCollection.class, args);
 	}
 
@@ -24,6 +30,7 @@ public class SongsCollection {
 
 	@Bean
 	public Consumer<String> writeMessage() {
-		return (value) -> System.out.println(value);
+		log.info("this log will never get printed");
+		return (value) -> log.info(value);
 	}
 }

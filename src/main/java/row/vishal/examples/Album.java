@@ -1,5 +1,6 @@
 package row.vishal.examples;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Album {
@@ -9,6 +10,10 @@ public class Album {
 	private String title;
 	
 	private int id;
+	
+	public Album() {
+		listOfSongs = new ArrayList<Song>();
+	}
 	
 	public List<Song> getListOfSongs() {
 		return listOfSongs;
@@ -20,4 +25,10 @@ public class Album {
 	public void addToList(Song song) {
 		listOfSongs.add(song);
 	}
+
+	@Override
+	public String toString() {
+		return "Album [listOfSongs=" + listOfSongs + ", title=" + title + ", id=" + id + "]";
+	}
+	
 }
