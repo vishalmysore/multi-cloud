@@ -1,12 +1,13 @@
-Multi Cloud Function
+###Multi Cloud Function
 
 A Museum of Pink Floyd songs, this is what I used to listen while writing millions of line of code!
 
-checkout code and run 
+checkout the code and run 
 
 ```
 mvn clean install 
 ```
+
 Run the main program <b>row.vishal.examples.SongsCollection</b> through your IDE or run through maven
 
 ```
